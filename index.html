@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Book by M A Tahhan</title>
+    <meta name="descriptive"
+        content="This is the coding assignment from Codworks, which is a Phone Book created using HTML, CSS, JS, and jQuery; I hope you enjoy my humble program">
+    <meta name="author" content="Mohammad Ala Tahhan">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="jquery.js" defer></script>
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h1 class="main-title">PHONE BOOK</h1>
+        <h4>created by: Mohammad Ala Tahhan</h4>
+    </header>
+
+    <div class="add-search-and-contact-list">
+        <button id="add-btn"><img src="./img/add.png" id="add-logo" alt="add logo"> ADD NEW CONTACT</button>
+        <div class="divider"></div>
+        <div class="contact-section">
+            <!-- <span class="separator">|</span> -->
+            <img src="./img/search.png" id="search-logo" alt="search logo">
+            <input type="text" id="search-input" placeholder="Search contact...">
+        </div>
+
+        <div class="divider"></div>
+
+        <section class="display-contact-list">
+            <h2>Contacts List</h2>
+            <div id="contacts-list"></div>
+        </section>
+    </div>
+
+    <div class="add-contact-popup">
+        <section class="add-new-contact">
+            <img src="./img/add.png" alt="add contact logo">
+            <img src="./img/close.png" id="close-btn" alt="close button logo" title="close">
+            <h3>ADD NEW CONTACT</h3>
+            <form>
+                <label for="first-name">First Name <span class="red-color">*</span></label>
+                <input type="text" id="first-name" class="input" placeholder="ex: Mohammad Ala"
+                    title="*First Name is required" required>
+                <label for="surname">Surname</label>
+                <input type="text" id="surname" class="input" title="Last Name" placeholder="ex: Tahhan">
+                <label for="phone">Phone/Mobile Number <span class="red-color">*</span></label>
+                <input type="tel" id="phone" class="input" pattern="[0-9]" title="*Phone/Mobile Phone is required"
+                    placeholder="must be from 7 to 15 digits" required>
+                <label for="address">Address</label>
+                <textarea id="address" class="input" rows="2" cols="25" placeholder="Street, No. City"></textarea>
+                <input type="hidden" id="edit-contact-id">
+                <button id="save-btn">Save Contact</button>
+            </form>
+        </section>
+    </div>
+
+    <div class="edit-contact-popup">
+        <section class="edit-contact">
+            <img src="./img/edit.png" alt="edit contact logo">
+            <img src="./img/close.png" id="close-edit-btn" alt="close button logo" title="close">
+            <h3>EDIT CONTACT</h3>
+            <form>
+                <label for="edit-first-name">First Name <span class="red-color">*</span></label>
+                <input type="text" id="edit-first-name" class="edit-input" placeholder="ex: Mohammad Ala"
+                    title="*First Name is required" required>
+                <label for="edit-surname">Surname</label>
+                <input type="text" id="edit-surname" class="edit-input" title="Last Name" placeholder="ex: Tahhan">
+                <label for="edit-phone">Phone/Mobile Number <span class="red-color">*</span></label>
+                <input type="tel" id="edit-phone" class="edit-input" pattern="[0-9]"
+                    title="*Phone/Mobile Phone is required" placeholder="must be from 7 to 15 digits" required>
+                <label for="edit-address">Address</label>
+                <textarea id="edit-address" class="edit-input" rows="2" cols="25"
+                    placeholder="Street, No. City"></textarea>
+                <input type="hidden" id="edit-contact-id">
+                <input type="hidden" id="edit-contact-id">
+                <button id="update-btn">Update Contact</button>
+            </form>
+        </section>
+    </div>
+
+    <div class="warning-msg-popup">
+        <section class="warning-message">
+            <p id="delete-confirm">Are you sure you want to <span class="warning-text-red">DELETE</span> the
+                contact?
+            </p>
+            <button id="red-btn">Yes</button>
+            <button id="blue-btn">No</button>
+        </section>
+    </div>
+
+    <div class="message" id="message"></div>
+
+    <div id="welcome-screen">
+        <img src="./img/Alaa.png" alt="">
+        <h1>Welcome to my Phone Book</h1>
+        <p>&#128077; I hope you enjoy it! &#128077;</p>
+    </div>
+
+    <footer class="fixed-footer">
+        <div id="doc">
+            <img src="./img/Alaa.png" alt="creator portrait">
+            <p>Please see<br><a href="./documentation.html" target="_blank">Documentation</a><br>for more information<br>about my
+                Phone Book</p>
+        </div>
+</body>
+</footer>

@@ -1,0 +1,643 @@
+* {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* font-family:Arial, Helvetica, sans-serif; */
+}
+
+/****************************************/
+/*********** Header Elements ************/
+/****************************************/
+
+header {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 3px;
+  background-color: rgb(60, 62, 63);
+  width: 800px;
+  height: 100px;
+  text-align: center;
+  /* padding: 3px; */
+  justify-content: center;
+  border-radius: 10px;
+}
+
+header h1,
+header h4 {
+  margin: 0 auto;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-name: textColorAnimation;
+}
+
+@keyframes textColorAnimation {
+  0% {
+    color: rgba(223, 223, 223, 0.7);
+  }
+
+  25% {
+    color: rgb(255, 229, 156, 0.7);
+  }
+
+  50% {
+    color: rgb(166, 255, 224, 0.7);
+  }
+
+  100% {
+    color: rgb(223, 223, 223, 0.7);
+  }
+}
+
+/**************************************/
+/*********** Body Elements ************/
+/**************************************/
+
+.add-search-and-contact-list {
+  width: 800px;
+  height: 600px;
+  margin: 3px auto;
+  padding: 0.05px;
+  border-radius: 10px;
+}
+
+body {
+  background-color: rgb(216, 226, 228);
+}
+
+/***** Add Button *****/
+#add-logo,
+#search-logo {
+  width: 22px;
+  margin-right: 5px;
+}
+
+#search-input {
+  width: 300px;
+  height: 25px;
+  border: 1px solid gray;
+  border-radius: 7px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#add-btn {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: rgb(47, 47, 47);
+  background-color: rgb(0, 241, 120);
+  width: 220px;
+  height: 35px;
+  margin: 20px auto;
+  padding: 0 15px;
+  top: auto;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+#add-btn:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(81, 255, 168);
+}
+
+/***** Separator (Divider) *****/
+
+.divider {
+  border-top: 3px dotted rgb(153, 153, 153);
+  margin: 20px;
+}
+
+/***** Search Element *****/
+
+.contact-section {
+  display: grid;
+  place-content: center;
+  /* align-items: center; */
+  justify-content: center;
+  margin: 0 auto;
+}
+
+#search-logo {
+  margin: -35px;
+  margin-top: 3px;
+  -webkit-user-drag: none;
+}
+
+#seach-input {
+  height: 22px;
+  width: 400px;
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid gray;
+  border-radius: 7px;
+}
+
+.red-color {
+  color: red;
+}
+
+/*******************************/
+/***** Contacts List Table *****/
+/*******************************/
+
+.display-contact-list {
+  grid-template-columns: 150px 150px 200px 300px auto;
+  border-collapse: collapse;
+}
+
+#contact-list-table {
+  display: grid;
+  border-collapse: collapse;
+  justify-content: center;
+}
+
+#contact-list-table th,
+#contact-list-table td {
+  max-width: 100px;
+  min-width: 100px;
+  max-height: 120px;
+  min-height: 60px;
+  border: 1px solid rgb(215, 215, 215);
+  padding: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.search-contact,
+.contacts-list {
+  width: 800px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-contact {
+  background-color: #f5f5f5;
+}
+
+.contacts-list {
+  background-color: #f5f5f5;
+}
+
+.contacts-list th {
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #39373ba9;
+  padding: 5px;
+}
+
+.contacts-list tbody tr:nth-child(even) {
+  background-color: #cdebf37a;
+}
+
+.contacts-list tbody tr {
+  text-align: center;
+}
+
+.display-contact-list h2 {
+  padding-left: 20px;
+}
+
+/* Contact not found Message */
+.no-contact-message {
+  font-size: 18px;
+  color: rgb(255, 102, 0);
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Face-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Messages */
+.message {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.green-message {
+  background-color: #23d66d;
+}
+
+.yellow-message {
+  background-color: #e0900f;
+}
+
+.red-message {
+  background-color: #df4635;
+}
+
+button {
+  margin: 3px;
+  padding: 10px 15px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button.edit-btn {
+  background-color: orange;
+  color: white;
+}
+
+button.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* for both edit and delete*/
+button:hover {
+  opacity: 0.8;
+}
+
+/*******************************/
+/***** ADD NEW CONTACT FROM ****/
+/*******************************/
+
+.add-contact-popup {
+  background: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  /* (flex) to show*/
+  justify-content: center;
+  align-items: center;
+}
+
+.add-new-contact {
+  height: 500px;
+  width: 400px;
+  background: white;
+  padding: 20px;
+  border: 5px solid rgba(0, 128, 0, 0.5);
+  border-radius: 10px;
+  position: relative;
+}
+
+.input {
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: block;
+  width: 50%;
+  border: 1px solid rgb(192, 192, 192);
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.add-new-contact label {
+  color: rgb(115, 115, 115);
+  font-size: 18px;
+  padding: 3px;
+  margin-left: 85px;
+}
+
+/***** Save Button in the Add Contact Form *****/
+#save-btn {
+  font-size: 95%;
+  color: rgb(47, 47, 47);
+  background-color: rgb(0, 241, 120);
+  height: 35px;
+  width: 56%;
+  margin: 20px auto;
+  border: none;
+  box-shadow: 20px, 50px, gray;
+  display: block;
+  cursor: pointer;
+}
+
+#save-btn:hover {
+  color: rgb(5, 56, 24);
+  background-color: rgb(62, 255, 158);
+  font-stretch: expanded;
+  transform: scale(1.02);
+}
+
+#save-btn:active {
+  transform: scale(0.98);
+  background: rgb(33, 203, 101);
+}
+
+/*******************************************/
+
+.add-new-contact img {
+  height: 100px;
+  background-color: rgb(0, 241, 120);
+  position: absolute;
+  top: -50px;
+  right: calc(50% + -50px);
+  border-radius: 50px;
+}
+
+#close-btn {
+  height: 40px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 56px;
+  margin-right: -165px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.add-new-contact h3 {
+  color: rgb(2, 84, 84);
+  font-size: 25px;
+  height: 50px;
+  padding: 5px;
+  position: relative;
+  right: -86px;
+  top: 20px;
+}
+
+/****************************/
+/***** EDIT CONTACT FROM ****/
+/****************************/
+
+.edit-contact-popup {
+  background: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  /* (flex) to show*/
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-contact {
+  height: 500px;
+  width: 400px;
+  background: white;
+  padding: 20px;
+  border: 5px solid rgba(255, 166, 0, 0.5);
+  border-radius: 10px;
+  position: relative;
+}
+
+.edit-input {
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: block;
+  width: 50%;
+  border: 1px solid rgb(192, 192, 192);
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.edit-contact label {
+  color: rgb(115, 115, 115);
+  font-size: 18px;
+  padding: 3px;
+  margin-left: 85px;
+}
+
+/***** Update Button in the Update Contact Form *****/
+#update-btn {
+  font-size: 95%;
+  color: rgb(47, 47, 47);
+  background-color: rgb(241, 169, 0);
+  height: 35px;
+  width: 56%;
+  margin: 20px auto;
+  border: none;
+  box-shadow: 20px, 50px, gray;
+  display: block;
+  cursor: pointer;
+}
+
+#update-btn:hover {
+  color: rgb(56, 47, 5);
+  background-color: rgb(255, 222, 5);
+  font-stretch: expanded;
+  transform: scale(1.02);
+}
+
+#update-btn:active {
+  transform: scale(0.98);
+  background: rgb(255, 198, 65);
+}
+
+/*******************************************/
+
+.edit-contact img {
+  height: 100px;
+  background-color: orange;
+  position: absolute;
+  top: -50px;
+  right: calc(50% + -50px);
+  border-radius: 50px;
+}
+
+#close-edit-btn {
+  height: 40px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 56px;
+  margin-right: -165px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.edit-contact h3 {
+  color: rgb(2, 84, 84);
+  font-size: 25px;
+  height: 50px;
+  padding: 5px;
+  position: relative;
+  right: -110px;
+  top: 20px;
+}
+
+/*************************/
+/**** Warning Message ****/
+/*************************/
+
+.warning-msg-popup {
+  background: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.warning-message {
+  font-size: 18px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  width: 350px;
+  height: 120px;
+  padding: 20px;
+  border: 5px solid red;
+  border-radius: 30px;
+  position: relative;
+}
+
+#red-btn,
+#blue-btn {
+  margin: 3px;
+  width: 40%;
+  height: 35%;
+  font-size: 20px;
+  color: rgb(91, 91, 91);
+  border: none;
+  border-radius: 10px;
+}
+
+#red-btn {
+  color: aliceblue;
+  background-color: red;
+}
+
+#blue-btn {
+  background-color: lightblue;
+}
+
+#red-btn:hover {
+  background-color: rgb(212, 0, 0);
+}
+
+#blue-btn:hover {
+  background-color: rgb(132, 203, 227);
+}
+
+#red-btn:active {
+  background-color: rgb(157, 17, 17);
+}
+
+#blue-btn:active {
+  background-color: rgb(85, 153, 175);
+}
+
+/************************************************************/
+/***** Messages (Added - Updated - Deleted) Successfully ****/
+/************************************************************/
+
+#added-message {
+  display: none;
+  font-size: 20px;
+  background: rgba(0, 128, 0, 0.55);
+  height: 60px;
+  width: 400px;
+  padding: 2px;
+  justify-content: center;
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 200px);
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  color: white;
+}
+
+#updated-message {
+  display: none;
+  font-size: 20px;
+  background: rgba(255, 166, 0, 0.65);
+  height: 60px;
+  width: 400px;
+  padding: 2px;
+  justify-content: center;
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 200px);
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  color: white;
+}
+
+#deleted-message {
+  display: none;
+  font-size: 20px;
+  background: rgba(255, 0, 0, 0.6);
+  height: 60px;
+  width: 400px;
+  padding: 2px;
+  justify-content: center;
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 200px);
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  color: white;
+}
+
+/***** Welcome Screen *****/
+#welcome-screen {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+#welcome-screen img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+#welcome-screen h1 p {
+  justify-content: center;
+}
+
+/*************************/
+/***** Floating Note *****/
+/*************************/
+
+footer {
+  position: fixed;
+  justify-self: center;
+  bottom: 0;
+  color: #aaaaaa;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#doc {
+  display: flex;
+  width: 800px;
+  margin: 1px;
+  padding: 5px;
+}
+
+#doc img {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  margin: 1px;
+  padding: 5px;
+}
