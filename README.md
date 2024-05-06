@@ -74,7 +74,7 @@ Contributions are welcome! If you'd like to contribute to the Phone Book project
 
 **Alaa Tahhan**
 
-- [Portfolio](https://mohammadala.netlify.app/)
+- [Portfolio](https://alaatahhan.netlify.app/)
 - [GitHub](https://github.com/SoftwareEngineerAlaa)
 - [LinkedIn](https://www.linkedin.com/in/mohammad-ala-tahhan/)
 
